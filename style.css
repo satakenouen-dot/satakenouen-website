@@ -1,0 +1,195 @@
+/* リセット・基本 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; color: #333; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* ヘッダー */
+header {
+  background: #2d6a2d;
+  color: white;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo h1 { font-size: 1.3rem; font-weight: bold; }
+.logo .tagline { font-size: 0.75rem; opacity: 0.85; margin-top: 2px; }
+nav ul { list-style: none; display: flex; gap: 24px; }
+nav a { font-size: 0.95rem; font-weight: bold; padding: 4px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+nav a:hover { border-bottom-color: #a8d5a8; }
+
+/* ヒーロー */
+.hero {
+  background: linear-gradient(135deg, #3a7d3a 0%, #5a9e5a 50%, #7ab87a 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h2 { font-size: 1.8rem; margin-bottom: 16px; line-height: 1.4; }
+.hero p { font-size: 1.1rem; margin-bottom: 32px; opacity: 0.95; }
+.btn {
+  display: inline-block;
+  background: white;
+  color: #2d6a2d;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+
+/* セクション共通 */
+section { padding: 60px 0; }
+section:nth-child(even) { background: #f8fdf8; }
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2d6a2d;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 16px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #5a9e5a;
+  border-radius: 2px;
+}
+
+/* 特徴グリッド */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.feature-card:hover { transform: translateY(-4px); }
+.feature-icon { font-size: 2.4rem; margin-bottom: 12px; }
+.feature-card h3 { font-size: 1.05rem; color: #2d6a2d; margin-bottom: 10px; }
+.feature-card p { font-size: 0.9rem; color: #555; }
+
+/* 取扱品目 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.category-item {
+  background: #2d6a2d;
+  color: white;
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.local-veg {
+  background: #fffbe6;
+  border-left: 4px solid #f0a500;
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+}
+.local-veg h3 { color: #b37800; margin-bottom: 8px; }
+.local-veg p { font-size: 0.9rem; color: #555; }
+
+/* Webショップ */
+.webshop { text-align: center; }
+.webshop p { margin-bottom: 28px; font-size: 1rem; color: #555; }
+.shop-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.shop-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+.shop-btn:hover { opacity: 0.85; }
+.shop-btn.yahoo { background: #ff0033; color: white; }
+
+/* お問い合わせ */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.contact-label {
+  background: #2d6a2d;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  min-width: 70px;
+  text-align: center;
+}
+.contact-item a { color: #2d6a2d; font-weight: bold; }
+
+/* フッター */
+footer {
+  background: #1a3d1a;
+  color: #ccc;
+  text-align: center;
+  padding: 32px 20px;
+  font-size: 0.85rem;
+  line-height: 2;
+}
+.copyright { margin-top: 8px; color: #999; }
+
+/* テーブル（会社概要用） */
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table th, .info-table td { padding: 14px 16px; border-bottom: 1px solid #e0e0e0; text-align: left; }
+.info-table th { background: #f0f7f0; color: #2d6a2d; font-weight: bold; width: 30%; }
+.info-table tr:last-child th, .info-table tr:last-child td { border-bottom: none; }
+
+/* 商品ページ */
+.product-section { margin-bottom: 40px; }
+.product-section h3 { font-size: 1.2rem; color: #2d6a2d; border-left: 4px solid #5a9e5a; padding-left: 12px; margin-bottom: 16px; }
+.product-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.product-list li { background: #f0f7f0; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; }
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .hero h2 { font-size: 1.3rem; }
+  .header-inner { justify-content: center; }
+  nav ul { gap: 16px; }
+  .contact-item { flex-direction: column; text-align: center; }
+}
